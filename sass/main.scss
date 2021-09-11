@@ -1,0 +1,624 @@
+/*fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+/*main colors*/    
+$purple: #FB7BF0;
+$green: #99E2D0;
+$violet: #9356DC;
+$grey: #E5E5E5;
+$grey-light: #F2F2F2;
+$black: #333333;
+
+
+html, body{
+box-sizing: border-box;
+display: block;
+font-size: 18px;
+font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background-color: white;
+    width: 100%;
+    margin: 0;
+
+    /*header*/
+    .header{
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        height: 40px;
+
+         a i{
+             color: black;
+             margin: 0 10px 25px auto;
+             font-size: 1.5em;
+         }
+
+        img{
+            margin: auto;
+        }
+    }
+
+    /*search-form*/
+    .search-form{
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        background-color: $grey;
+        margin: auto auto 0 auto;
+
+        &__icon{
+            margin: 30px auto;
+            i{
+                font-size: 15px;
+                margin: auto;
+            }
+        }
+
+        &__input{
+            color: $grey;
+            margin: 15px auto;
+            background-color: $grey;
+            font-weight: 700;
+            border: none;
+            width: 100px;
+          }
+    }
+
+    /*presentation*/
+    .presentation{
+        background-color: $grey-light;
+        width: 100%;
+        display: block;
+        text-align: center;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 5px;
+
+        &__title{   
+            font-weight: bold;
+            margin: 20px auto;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5em;
+        }
+
+        &__text{
+            font-size: 1em;
+            font-weight: 600;
+            margin: 30px auto;
+        }
+
+        &__btn{
+            background: linear-gradient(360deg, #9356DC 0%, #FF79DA 100%);
+            box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;     
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            margin: 20px auto;
+            transition: 500ms;          
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        &__btn:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    /*nav*/
+    .nav{
+        background-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &__title{
+           font-weight: 800;
+           font-size: 1.2em;
+           text-align: left;
+           margin-left: 50px;
+       }
+
+       &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: auto;
+        padding-bottom: 10px;
+        background-color: white;
+
+           &__card{
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               list-style: none;
+               background-color: $grey-light;
+               box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+               cursor: pointer;
+               height: 50px;
+               border-radius: 30px;
+               transition: 500ms;
+                        
+               &__number{
+                    display: table-cell;
+                    background-color: $violet;
+                    border-radius: 100%;
+                    color: white;
+                    width: 25px;
+                    height: 25px;
+                    margin: auto;
+                    text-align: center;
+               }
+
+               i{
+                   margin: auto 5px ;
+               }
+           }
+
+           &__card:hover{
+               transform: scale(1.1);
+           }
+       }
+    }   
+
+    /*figures*/
+    .figures{
+        display: block;
+        background-color: $grey;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &__title{
+            font-weight: 800;
+           font-size: 1.2em;
+           text-align: left;
+           margin-left: 50px;          
+        }
+
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-bottom: 30px;
+
+            &__figure{         
+                display: block;
+                width: 250px;
+                height: 200px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                margin: 15px auto;
+                transition: 500ms;
+
+                &__img{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    object-fit: cover;
+
+                    .new{
+                        position: absolute;
+                        top: -140px;
+                        right: 15px;
+                        border-radius: 5px;
+                        color: #2c9c81;;
+                        background-color: $green;
+                        height: 20px;
+                        width: 100px;
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 150px;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                    }
+
+                    .main__figure__infos{
+                        background-color: white;
+                        display: grid;
+                        height: 60px;
+                        grid-template-areas: 
+                        "food-name food-icon"
+                        "food-description food-icon";
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+
+                        h3{
+                            font-weight :bold;
+                            font-weight: 100;
+                            grid-area: food-name;
+                            margin: 0 auto 0 10px;
+                        }
+
+                        p{
+                            font-weight: 100;
+                            grid-area:food-description;
+                            margin: 0 auto auto 10px;
+                        }
+
+                        .icon{
+                            margin: auto 5px;
+                            grid-area: food-icon;  
+                            
+                            i{
+                                display: none;
+                            }
+
+                            i::before{
+                                content: "\f004";
+                            }
+                        }
+
+                        .icon:hover{
+                            opacity: 0;
+
+                            .fa-heart:before {
+                                content: "\f004";
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__figure:hover{
+                transform: scale(1.15);            }
+        }
+    }
+
+    /*pages*/
+    .image{
+        width: 100%;
+        height: 300px;
+        border-radius: 15px;
+        position: relative;
+        
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+        }
+    }
+
+    /*restaurant*/
+    .restaurant{
+        display: block;
+        background-color: $grey-light;
+        left: 0;
+        right: 0;
+        margin: -80px auto;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+        padding: 30px 40px 20px 20px;
+        z-index: 0;
+
+        .content{
+            display: block;
+            width: 900px;
+            margin: auto;  
+            
+            &__heading{
+                display: table;
+                width: 100% ;
+                height: 30px;
+                
+                &__title{
+                    float: left;
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-family: "Shrikhand", cursive, sans-serif;
+                    font-size: 1.7em;
+                    margin: 30px auto auto 30px;          
+                }
+                
+                i{
+                    float: right;
+                    display: table-cell;
+                    font-size: 30px;
+                    margin: 40px auto;
+                }
+            }
+            
+            .menu{           
+                &__title{
+                    float: left;
+                    font-size: 1em;
+                    font-weight: 400;
+                    color: black;
+                    position: relative;
+                }
+                &__title-line{
+                    border-style: solid;
+                    margin: 40px auto;
+                    background-color: $green;
+                    position: absolute;
+                    width: 100px;
+                    color: $green;
+                    height: 1px;            
+                }             
+                    
+                &__card{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 15px;
+                    margin: 15px auto;
+                    height: 80px;
+                    width: 100%;
+                    justify-content: space-between;
+                    transition: 500ms;
+                    animation: slide 500ms;
+
+                    &__details{
+                        background-color: white;
+                        height: 80px;
+                        width: 100%;
+                        border-radius: 15px;
+                        display: grid;
+                        cursor: pointer;
+                        transition: 400ms ease-in-out;
+                        grid-template-columns: 1fr*2;
+                        grid-template-rows: 1fr*2;
+                        grid-template-areas: 
+                        "nom ."
+                        "supplements price";
+    
+                        h3{
+                            grid-area: nom;
+                            text-align: left;
+                            margin: 10px auto auto 15px;
+                            font-weight: bolder;
+                            font-size: 21px;
+                        }
+    
+                        .supplements{
+                            grid-area: supplements;
+                            text-align: left;
+                            margin: 0px auto 15px 15px;
+                            font-weight: bold;
+                            font-size: 18px;
+                            font-weight:400;
+                        }
+                        
+                        .price{
+                            grid-area: price;
+                            font-weight: bold;
+                            margin: auto 10px 20px auto;
+                            font-size: 17px;
+                        }
+                    }              
+    
+                    &__check-btn{
+                        width: 0;
+                        background-color: #99E2D0;
+                        border-radius: 5px;
+                        display: none;
+                        text-align: center;
+                        transition: 500ms ease-in-out;
+    
+                        .fa-check-circle{
+                            font-size: 25px;
+                            margin: 25px auto;
+                            display: none;
+                            transition: 1000ms;
+                        }
+                    }
+                }
+
+                @keyframes slide{
+                    0% { transform: scaleX(0);
+                     }
+                    25% {
+                        transform: scaleX(.25);
+
+                    }
+                    50% {
+                        transform: scaleX(.50);
+
+                    }
+                    75% {
+                        transform: scaleX(.75);
+
+                    }
+                    100%{
+                        transform: scaleX(1);
+                    }
+                }
+    
+                &__card:hover{
+                    &__details{
+                        width: 90%;
+                        
+                    }
+    
+                    .menu__card__check-btn{
+                            width: 60px;
+                            display: block;
+                            cursor: pointer;
+                            
+                        
+                            .fa-check-circle{
+                                display: block;
+                                transition: 900ms ease-in-out;
+                            }
+                        }
+                    }
+
+                &__btn{
+                    height: 50px;
+                    width: 200px;
+                    font-size: 16px;
+                    background: linear-gradient(360deg, $violet 0%, $purple 100%);
+                    color: white;
+                    border-radius: 30px;
+                    margin: 20px auto 100px auto;
+                    border: none;
+                    font-weight: bold;
+                }
+            }    
+        }
+    }
+
+    /*footer*/
+    .footer{
+        background-color: $black;
+        display: block;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    
+        &__home-link{
+            text-decoration: none;
+            h4{
+                color: white;
+                font-size: 1em;
+                font-weight: lighter;
+                font-family: "Shrikhand", cursive;
+            }
+        }
+    
+        &__links{
+            li{
+                display: block;
+                margin: 5px auto;
+                font-size: 16px;
+    
+                i{
+                    color: white;
+                }
+    
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/*responsive for 1024px*/
+@media screen and (min-width: 1024px) {
+    .container{
+        text-align: center;
+
+        &__title{
+            margin: auto;
+        }
+
+        .nav{
+            text-align: center;
+            margin: auto;
+
+            &__list{
+                width: auto;
+
+                &__card{
+                    margin: 10px 20px auto 20px;
+                    width: 250px;
+                }
+               
+            }
+        }
+
+        .figures{
+            .main{
+                justify-content: center;
+
+                &__figure{
+                    margin: 30px 20px auto 20px;
+                }
+            }
+        }
+    }
+}
+
+/*responsive for 768px*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        .nav{
+            &__list{
+                display: block;
+                margin: auto;
+                text-align: center;
+                
+                &__card{
+                    width: 250  px;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        .figures{
+            .main{
+                flex-direction: column;
+
+                &__figure{
+                    margin: 20px auto;
+                }
+            }
+        } 
+
+        .restaurant{
+            .content{
+                width: 700px ;
+            }
+        }
+
+        .footer{
+            margin: 10px auto;
+        }
+    }
+}
+
+/*responsive for 350px*/
+@media screen and (min-width: 350px) and (max-width: 767px){
+  .container{
+        .header{
+            height: 50px;
+            align-items: center;
+
+            img{
+                margin: auto 60px;
+            }
+        }
+
+      .nav{
+        &__list{
+            display: block;
+            margin: auto;
+            text-align: center;
+            
+            &__card{
+                width: 250px;
+                margin: 20px auto;
+            }
+        }
+      }
+      .restaurant{
+          .content{
+              width: 340px;
+          }
+      }
+  }
+
+  .figures{
+    .main{
+        flex-direction: column;
+
+        &__figure{
+            margin: 30px auto;
+        }
+    }
+} 
+
+}
